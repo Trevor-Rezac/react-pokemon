@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 export default function PokemonDetail() {
   const [pokemon, setPokemon] = useState({});
-
   const params = useParams();
 
   useEffect(() => {
@@ -22,13 +21,21 @@ export default function PokemonDetail() {
 
   // console.log('||', pokemon);
 
+  function handleClick() {
+    window.location.href = pokemon.pokedex;
+  }
+
   return (
     <> <Link to='/'>Home</Link>
       <div>PokemonDetail</div>
       <h2> {pokemon.pokemon} 
       </h2>
       <p>HP: {pokemon.hp}</p>
-      <img src={`${pokemon.url_image}`}></img>
+      <img 
+        className='poke-image' 
+        src={`${pokemon.url_image}`} 
+        onClick={handleClick}>
+      </img>
       <p>Type1: {pokemon.type_1}</p>
       <p>Type2: {pokemon.type_2}</p>
       <p>Ability1: {pokemon.ability_1}</p>

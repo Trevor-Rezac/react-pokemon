@@ -58,3 +58,7 @@
   width: 150px;
   height: 150px;
 }
+
+.poke-image {
+  cursor: pointer;
+}
