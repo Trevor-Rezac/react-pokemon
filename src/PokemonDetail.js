@@ -28,7 +28,7 @@ export default function PokemonDetail() {
   return (
     <> <Link to='/'>Home</Link>
       <div>PokemonDetail</div>
-      <h2> {pokemon.pokemon} 
+      <h2 className='poke-name'> {pokemon.pokemon} 
       </h2>
       <p>HP: {pokemon.hp}</p>
       <img 
