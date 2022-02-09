@@ -17,7 +17,6 @@ export default function PokemonPage() {
       const to = page * perPage;
       const pokemon = await getAllPokemon(from, to, searchQuery);
 
-
       setPokemon(pokemon);
     }
 

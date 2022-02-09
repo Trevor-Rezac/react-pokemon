@@ -13,9 +13,8 @@ export async function getAllPokemon(from = 0, to = 50, searchQuery) {
     const response = await client
       .from('pokemon')
       .select()
-      .range(from, to)
       .ilike('pokemon', `%${searchQuery}%`);
-    
+
     return checkError(response);
   }
 }
