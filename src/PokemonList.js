@@ -5,8 +5,9 @@ export default function PokemonList({ pokemon }) {
   
   return (
     <>
-      
-      {pokemon.map((pokemon, i) => <Pokemon key={`${pokemon}-${i}`} pokemon={pokemon} />)}
+      <div className='pokemon-list'>
+        {pokemon.map((pokemon, i) => <Pokemon key={`${pokemon}-${i}`} pokemon={pokemon} />)}
+      </div>
     </>
   );
 }
