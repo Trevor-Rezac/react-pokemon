@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
+import PokemonList from './PokemonList';
 import { getAllPokemon } from './services/fetch-utils';
+
 
 export default function PokemonPage() {
   const [pokemon, setPokemon] = useState([]);
-  console.log('||', pokemon);
+  const [page, setPage] = useState(1);
+
+//   console.log('||', pokemon);
 
   useEffect(() => {
     async function fetchPokemon() {
@@ -15,7 +19,12 @@ export default function PokemonPage() {
     fetchPokemon();
 
   }, []);
+
+
   return (
-    <div>PokemonPage</div>
+    <>
+      <div>PokemonPage {page}</div>
+      <PokemonList pokemon={pokemon}/>
+    </>
   );
 }
