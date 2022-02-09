@@ -7,6 +7,7 @@ import {
   Route,
 } from 'react-router-dom';
 import PokemonPage from './PokemonPage';
+import PokemonDetail from './PokemonDetail';
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <PokemonPage />
+          </Route>
+          <Route exact path="/pokemon-detail/:id">
+            <PokemonDetail />
           </Route>
         </Switch>
       </div>
